@@ -1,0 +1,37 @@
+---
+title: "Agentic AI Patterns"
+date: "2025-11-24"
+summary: "Emerging patterns in building agentic systems with LLMs and tool use."
+---
+
+# Agentic AI Patterns
+
+Notes on building systems where AI agents can reason, plan, and execute tasks autonomously.
+
+## Key Patterns
+
+### Tool Use
+- Function calling as the primitive
+- Structured outputs for reliability
+- Error handling and retry logic
+
+### Planning & Reasoning
+- Chain-of-thought for complex tasks
+- ReAct pattern (Reason + Act)
+- Multi-step workflows with checkpoints
+
+### Memory & Context
+- Short-term: conversation history
+- Long-term: vector stores, knowledge graphs
+- Working memory: task-specific state
+
+## Implementation Notes
+
+When building agentic systems:
+1. Start with clear tool definitions
+2. Design for observability from day one
+3. Build in human-in-the-loop checkpoints
+4. Test failure modes extensively
+
+The key is balancing autonomy with control.
+

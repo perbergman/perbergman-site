@@ -1,0 +1,36 @@
+---
+title: "Blockchain Finality Patterns"
+date: "2025-11-20"
+summary: "Different approaches to achieving finality in distributed ledgers."
+---
+
+# Blockchain Finality Patterns
+
+Understanding how different blockchain architectures achieve transaction finality.
+
+## Types of Finality
+
+### Probabilistic Finality
+- Bitcoin, Ethereum PoW
+- Confidence increases with block depth
+- Never truly "final" but practically irreversible
+
+### Deterministic Finality
+- BFT-based systems (Tendermint, PBFT)
+- Finality achieved in single block
+- Trade-off: requires known validator set
+
+### Economic Finality
+- Ethereum PoS (Casper)
+- Finality backed by slashing conditions
+- Combines probabilistic and deterministic approaches
+
+## Practical Implications
+
+For enterprise blockchain:
+- Deterministic finality preferred for settlement
+- Requires careful validator selection
+- Network partition handling is critical
+
+The choice of finality mechanism fundamentally shapes the system's trust model.
+
