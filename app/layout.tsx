@@ -38,13 +38,19 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 </div>
               </div>
               <span className="badge">
-                Senior Manager, EY · Santa Fe, NM ·{" "}
+                Senior Manager, EY · USA ·{" "}
                 <a
                   href="https://www.linkedin.com/in/perbergman/"
                   target="_blank"
                   rel="noreferrer"
                 >
                   LinkedIn
+                </a>
+                {" · "}
+                <a
+                  href="mailto:nondualist@gmail.com"
+                >
+                  Email
                 </a>
               </span>
             </div>
