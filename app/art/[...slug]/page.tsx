@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { getEntryBySlug } from "@/lib/mdx";
-import { MDXRemote } from "next-mdx-remote/rsc";
+import { Mdx } from "@/components/Mdx";
 
 type ArtPageProps = {
   params: {
@@ -18,7 +18,7 @@ export default async function ArtEntry({ params }: ArtPageProps) {
 
   return (
     <main className="card">
-      <MDXRemote source={entry.content} />
+      <Mdx source={entry.content} />
     </main>
   );
 }

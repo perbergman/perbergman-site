@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { getNotebookBySlug } from "@/lib/mdx";
-import { MDXRemote } from "next-mdx-remote/rsc";
+import { Mdx } from "@/components/Mdx";
 
 type NotebookPageProps = {
   params: {
@@ -18,7 +18,7 @@ export default async function NotebookEntry({ params }: NotebookPageProps) {
 
   return (
     <main className="card">
-      <MDXRemote source={entry.content} />
+      <Mdx source={entry.content} />
     </main>
   );
 }

@@ -21,19 +21,31 @@ const components = {
   ul: (props: React.HTMLAttributes<HTMLUListElement>) => (
     <ul className="list-disc list-inside my-3 space-y-1" {...props} />
   ),
-  code: (props: React.HTMLAttributes<HTMLElement> & { className?: string }) => {
-    const match = /language-(\w+)/.exec(props.className || "");
-    const language = match ? match[1] : null;
+  pre: (props: React.HTMLAttributes<HTMLPreElement>) => {
+    // Check if this is a code block with a language
+    const codeElement = props.children as any;
 
-    // Handle Mermaid diagrams
-    if (language === "mermaid") {
-      const code = String(props.children).replace(/\n$/, "");
-      return <Mermaid chart={code} />;
+    if (codeElement?.props?.className) {
+      const match = /language-(\w+)/.exec(codeElement.props.className);
+      const language = match ? match[1] : null;
+
+      // Handle Mermaid diagrams
+      if (language === "mermaid") {
+        const code = String(codeElement.props.children).replace(/\n$/, "");
+        return <Mermaid chart={code} />;
+      }
     }
 
-    // Regular inline code
-    return <code className="font-mono text-sm px-1.5 py-0.5 rounded bg-neutral-900/70" {...props} />;
+    // Regular code block
+    return (
+      <pre className="bg-neutral-900/70 rounded-lg p-4 overflow-x-auto my-4">
+        {props.children}
+      </pre>
+    );
   },
+  code: (props: React.HTMLAttributes<HTMLElement>) => (
+    <code className="font-mono text-sm px-1.5 py-0.5 rounded bg-neutral-900/70" {...props} />
+  ),
   // Optimized images using Next.js Image component
   img: (props: React.ImgHTMLAttributes<HTMLImageElement>) => (
     <Image
