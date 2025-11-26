@@ -90,7 +90,7 @@ export default function HomePage() {
           <ul className="list">
             <li className="list-item small">
               Resume (PDF):{" "}
-              <a href="https://github.com/perbergman/resume" target="_blank" rel="noreferrer">
+              <a href="https://github.com/perbergman/resume/blob/main/resume.pdf" target="_blank" rel="noreferrer">
                 github.com/perbergman/resume
               </a>
             </li>
