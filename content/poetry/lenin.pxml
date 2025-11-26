@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE poetry SYSTEM "pxml.dtd">
+
+<poetry>
+
+  <about uri="tag:perbergman.com,2012-05-12:lenin">
+  </about>
+
+  <keywords>
+  </keywords>
+
+  <poems>
+
+     <poem name="mouth" localref="1">
+all thinking created in the mouth
+where inner and outer meets
+where the vomit comes out
+and the air in
+    </poem>
+
+ </poems>
+
+</poetry>
+

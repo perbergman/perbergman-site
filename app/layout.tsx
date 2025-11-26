@@ -22,6 +22,7 @@ const navLinks = [
   { href: "/systems", label: "Systems & Architecture" },
   { href: "/writing", label: "Writing" },
   { href: "/art", label: "Art & Experiments" },
+  { href: "/poetry", label: "Poetry" },
 ];
 
 export default function RootLayout({ children }: { children: ReactNode }) {

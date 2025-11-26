@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE poetry SYSTEM "pxml.dtd">
+
+<poetry>
+
+  <about uri="tag:perbergman.com,2024-11-26:example">
+    Example Collection
+  </about>
+
+  <keywords>
+    meditation, breath, presence
+  </keywords>
+
+  <poems>
+
+     <poem name="first light" localref="1">
+the morning arrives
+without announcement
+just the slow reveal
+of what was always there
+    </poem>
+
+     <poem name="between breaths" localref="2">
+in the space
+between inhale
+and exhale
+
+a universe
+expands
+collapses
+remains
+    </poem>
+
+     <poem name="digital silence" localref="3">
+the screen glows
+but says nothing
+we fill the void
+with our own noise
+
+what if we just
+sat
+with the emptiness
+    </poem>
+
+ </poems>
+
+</poetry>
+

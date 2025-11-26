@@ -52,6 +52,89 @@ a:focus-visible {
   height: auto;
 }
 
+/* Poetry styling - inspired by classic poetry presentation */
+.poetry-document {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.poetry-about {
+  color: var(--fg);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.poetry-keywords {
+  color: var(--muted);
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+.poetry-divider {
+  border: none;
+  border-top: 1px solid var(--border-subtle);
+  margin: 2rem 0;
+}
+
+.poetry-toc {
+  margin: 1.5rem 0;
+}
+
+.poetry-toc-item {
+  margin: 0.5rem 0;
+  font-family: Georgia, serif;
+}
+
+.poetry-toc-number {
+  color: var(--muted);
+  margin-right: 0.5rem;
+}
+
+.poetry-toc-dots {
+  color: var(--border-subtle);
+}
+
+.poetry-toc-link {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.poetry-toc-link:hover {
+  opacity: 0.8;
+}
+
+.poem {
+  margin: 3rem 0;
+}
+
+.poem-title {
+  color: var(--fg);
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  font-family: Georgia, serif;
+}
+
+.poem-content {
+  background: rgba(42, 42, 42, 0.3);
+  border-left: 3px solid #6b9080;
+  margin: 1rem 0;
+  padding: 0;
+  border-radius: 4px;
+}
+
+.poem-text {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--fg);
+  background: transparent;
+  padding: 1.5rem;
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-x: auto;
+}
+
 body {
   min-height: 100vh;
 }
