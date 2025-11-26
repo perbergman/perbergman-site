@@ -39,6 +39,19 @@ a:focus-visible {
   border-radius: 2px;
 }
 
+/* Mermaid diagram styling */
+.mermaid-diagram {
+  background: rgba(26, 26, 26, 0.5);
+  border-radius: 8px;
+  padding: 24px;
+  overflow-x: auto;
+}
+
+.mermaid-diagram svg {
+  max-width: 100%;
+  height: auto;
+}
+
 body {
   min-height: 100vh;
 }

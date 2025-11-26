@@ -3,9 +3,9 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
-import rehypeMermaid from "rehype-mermaid";
 import React from "react";
 import Image from "next/image";
+import { Mermaid } from "./Mermaid";
 
 const components = {
   // You can customize how elements render here if you like
@@ -21,9 +21,19 @@ const components = {
   ul: (props: React.HTMLAttributes<HTMLUListElement>) => (
     <ul className="list-disc list-inside my-3 space-y-1" {...props} />
   ),
-  code: (props: React.HTMLAttributes<HTMLElement>) => (
-    <code className="font-mono text-sm px-1.5 py-0.5 rounded bg-neutral-900/70" {...props} />
-  ),
+  code: (props: React.HTMLAttributes<HTMLElement> & { className?: string }) => {
+    const match = /language-(\w+)/.exec(props.className || "");
+    const language = match ? match[1] : null;
+
+    // Handle Mermaid diagrams
+    if (language === "mermaid") {
+      const code = String(props.children).replace(/\n$/, "");
+      return <Mermaid chart={code} />;
+    }
+
+    // Regular inline code
+    return <code className="font-mono text-sm px-1.5 py-0.5 rounded bg-neutral-900/70" {...props} />;
+  },
   // Optimized images using Next.js Image component
   img: (props: React.ImgHTMLAttributes<HTMLImageElement>) => (
     <Image
@@ -43,7 +53,6 @@ const mdxOptions = {
     rehypePlugins: [
       rehypeSlug,
       [rehypeAutolinkHeadings, { behavior: "wrap" }],
-      rehypeMermaid,
     ],
   },
 } as any;
