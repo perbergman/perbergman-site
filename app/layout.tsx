@@ -48,6 +48,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 </a>
                 {" · "}
                 <a
+                  href="https://github.com/perbergman"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  GitHub
+                </a>
+                {" · "}
+                <a
                   href="mailto:nondualist@gmail.com"
                 >
                   Email
