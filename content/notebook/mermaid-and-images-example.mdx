@@ -1,0 +1,94 @@
+---
+title: "Mermaid Diagrams & Images Example"
+date: "2025-11-26"
+summary: "Examples of using Mermaid diagrams and images in MDX"
+---
+
+# Mermaid Diagrams & Images Example
+
+This page demonstrates how to use Mermaid diagrams and images in your MDX content.
+
+## Mermaid Diagrams
+
+You can create diagrams using Mermaid syntax in code blocks:
+
+```mermaid
+graph TD
+    A[Start] --> B{Is it working?}
+    B -->|Yes| C[Great!]
+    B -->|No| D[Debug]
+    D --> B
+    C --> E[Deploy]
+```
+
+### Flowchart Example
+
+```mermaid
+flowchart LR
+    A[User] --> B[Frontend]
+    B --> C[API]
+    C --> D[Database]
+    D --> C
+    C --> B
+    B --> A
+```
+
+### Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Browser
+    participant Server
+    participant Database
+    
+    User->>Browser: Visit site
+    Browser->>Server: Request page
+    Server->>Database: Query data
+    Database-->>Server: Return data
+    Server-->>Browser: Send HTML
+    Browser-->>User: Display page
+```
+
+## Images
+
+### Using Local Images
+
+Place images in the `public/images/` directory, then reference them:
+
+```markdown
+![Description](/images/your-image.jpg)
+```
+
+### Using External Images
+
+You can also use images from external URLs:
+
+```markdown
+![Placeholder](https://via.placeholder.com/800x400)
+```
+
+Example:
+
+![Placeholder Image](https://via.placeholder.com/800x400/1a1a1a/ffc857?text=Example+Image)
+
+## Combining Both
+
+You can mix diagrams and images in the same document:
+
+```mermaid
+graph TB
+    subgraph "Content Types"
+        A[Text]
+        B[Images]
+        C[Diagrams]
+    end
+    
+    A --> D[MDX File]
+    B --> D
+    C --> D
+    D --> E[Beautiful Page]
+```
+
+That's it! Now you can use both Mermaid diagrams and images in all your MDX files.
+

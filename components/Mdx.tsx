@@ -3,7 +3,9 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypeMermaid from "rehype-mermaid";
 import React from "react";
+import Image from "next/image";
 
 const components = {
   // You can customize how elements render here if you like
@@ -22,6 +24,17 @@ const components = {
   code: (props: React.HTMLAttributes<HTMLElement>) => (
     <code className="font-mono text-sm px-1.5 py-0.5 rounded bg-neutral-900/70" {...props} />
   ),
+  // Optimized images using Next.js Image component
+  img: (props: React.ImgHTMLAttributes<HTMLImageElement>) => (
+    <Image
+      src={props.src || ""}
+      alt={props.alt || ""}
+      width={800}
+      height={600}
+      className="rounded-lg my-4"
+      style={{ width: "100%", height: "auto" }}
+    />
+  ),
 };
 
 const mdxOptions = {
@@ -30,6 +43,7 @@ const mdxOptions = {
     rehypePlugins: [
       rehypeSlug,
       [rehypeAutolinkHeadings, { behavior: "wrap" }],
+      rehypeMermaid,
     ],
   },
 } as any;
