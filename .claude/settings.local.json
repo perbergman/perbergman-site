@@ -4,7 +4,9 @@
       "Bash(ls:*)",
       "Bash(curl:*)",
       "Bash(pkill:*)",
-      "Bash(mv:*)"
+      "Bash(mv:*)",
+      "Bash(node:*)",
+      "Bash(git add:*)"
     ],
     "deny": []
   }

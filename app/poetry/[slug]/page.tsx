@@ -3,13 +3,14 @@ import { getPoetryBySlug } from "@/lib/pxml";
 import { Poetry } from "@/components/Poetry";
 
 type PoetryPageProps = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 export default async function PoetryEntry({ params }: PoetryPageProps) {
-  const poetry = await getPoetryBySlug(params.slug);
+  const resolvedParams = await params;
+  const poetry = await getPoetryBySlug(resolvedParams.slug);
   
   if (!poetry) {
     notFound();

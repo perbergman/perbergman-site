@@ -3,13 +3,14 @@ import { getEntryBySlug } from "@/lib/mdx";
 import { Mdx } from "@/components/Mdx";
 
 type WritingPageProps = {
-  params: {
+  params: Promise<{
     slug?: string[];
-  };
+  }>;
 };
 
 export default async function WritingEntry({ params }: WritingPageProps) {
-  const slugArray = params.slug || [];
+  const resolvedParams = await params;
+  const slugArray = resolvedParams.slug || [];
 
   const entry = await getEntryBySlug("writing", slugArray);
   if (!entry) {

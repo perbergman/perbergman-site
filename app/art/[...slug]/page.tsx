@@ -3,15 +3,17 @@ import { getEntryBySlug } from "@/lib/mdx";
 import { Mdx } from "@/components/Mdx";
 
 type ArtPageProps = {
-  params: {
+  params: Promise<{
     slug?: string[];
-  };
+  }>;
 };
 
 export default async function ArtEntry({ params }: ArtPageProps) {
-  const slugArray = params.slug || [];
-
+  const resolvedParams = await params;
+  const slugArray = resolvedParams.slug || [];
+  
   const entry = await getEntryBySlug("art", slugArray);
+  
   if (!entry) {
     notFound();
   }
