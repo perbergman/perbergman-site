@@ -15,7 +15,7 @@
     "gray-matter": "^4.0.3",
     "mermaid": "^11.12.1",
     "next": "^16.0.7",
-    "next-mdx-remote": "^5.0.0",
+    "next-mdx-remote": "^6.0.0",
     "react": "^19.2.1",
     "react-dom": "^19.2.1",
     "rehype-autolink-headings": "^7.1.0",
