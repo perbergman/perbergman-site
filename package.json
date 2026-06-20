@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint .",
+    "poetry:build": "node scripts/build-poetry.mjs",
+    "poetry:check": "node scripts/build-poetry.mjs --check"
   },
   "dependencies": {
     "@types/xml2js": "^0.4.14",
@@ -21,12 +23,19 @@
     "remark-gfm": "^4.0.1",
     "xml2js": "^0.6.2"
   },
+  "engines": {
+    "node": "24.x"
+  },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.3.5",
     "@types/node": "^20.0.0",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
-    "eslint": "^8.0.0",
-    "eslint-config-next": "14.2.5",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^16.0.7",
     "typescript": "^5.0.0"
+  },
+  "volta": {
+    "node": "24.17.0"
   }
 }

@@ -52,87 +52,186 @@ a:focus-visible {
   height: auto;
 }
 
-/* Poetry styling - inspired by classic poetry presentation */
-.poetry-document {
-  font-family: Georgia, "Times New Roman", serif;
+/* PXML v2 poetry — three-color system (collection / poem / turn), ported from
+   emit_html.py and adapted to the site's dark theme. Scoped under .pxml. */
+.pxml {
+  --pxml-moss: #8aa67a; /* collection: masthead spine + per-poem seq number */
+  --pxml-vermilion: #e2674a; /* poem: section header + underline */
+  --pxml-rose: #c98c63; /* turn lines: the dashed rhetorical pivots */
+  --pxml-measure: 34rem;
+  max-width: var(--pxml-measure);
+  margin: 0 auto;
+  font-family: var(--font-verse), "Iowan Old Style", Palatino, Georgia, serif;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  font-feature-settings: "liga", "onum", "kern";
 }
 
-.poetry-about {
+/* masthead — quiet, factual collection metadata */
+.pxml-masthead {
+  margin-bottom: 4.5rem;
+  padding-left: 0.9rem;
+  border-left: 3px solid var(--pxml-moss);
+}
+.pxml-collection-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 0.12em;
+  text-transform: lowercase;
+  margin: 0 0 0.5rem;
   color: var(--fg);
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
 }
-
-.poetry-keywords {
+.pxml-meta {
+  font-family: var(--font-mono), ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.8rem;
   color: var(--muted);
-  font-size: 1rem;
-  font-weight: normal;
-  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+}
+.pxml-uri {
+  color: var(--pxml-vermilion);
+}
+.pxml-abstract {
+  margin: 1.4rem 0 0;
+  max-width: 28rem;
+  color: #cdd2dc;
+  font-style: italic;
+  font-size: 1.05rem;
+}
+.pxml-keywords {
+  margin-top: 0.7rem;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--pxml-vermilion);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
 }
 
-.poetry-divider {
-  border: none;
+/* each poem is an island, not a section in a stream */
+.pxml-poem {
+  margin: 0 0 5rem;
+}
+.pxml-poem-title {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  text-transform: lowercase;
+  color: var(--pxml-vermilion);
+  margin: 0 0 0.5rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--pxml-vermilion);
+}
+.pxml-poem-title::before {
+  content: "§ ";
+  opacity: 0.55;
+}
+.pxml-poem[data-form] .pxml-poem-title::after {
+  content: " · " attr(data-form);
+  color: var(--pxml-rose);
+  letter-spacing: 0.1em;
+}
+
+/* per-poem dateline: date/time is the real metadata for dated entries */
+.pxml-dateline {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin: 0.7rem 0 1.8rem;
+}
+.pxml-seq {
+  color: var(--pxml-moss);
+  font-weight: 600;
+  margin-right: 0.6rem;
+}
+
+/* stanzas: discrete breaths, generously separated */
+.pxml-stanza {
+  margin: 0 0 1.9rem;
+}
+.pxml-line {
+  display: block;
+  line-height: 1.55;
+}
+.pxml-line-sp {
+  white-space: pre;
+}
+.pxml-turn {
+  color: var(--pxml-rose);
+  font-style: italic;
+}
+
+/* a genuine section break */
+.pxml-break {
+  border: 0;
   border-top: 1px solid var(--border-subtle);
-  margin: 2rem 0;
-}
-
-.poetry-toc {
-  margin: 1.5rem 0;
-}
-
-.poetry-toc-item {
-  margin: 0.5rem 0;
-  font-family: Georgia, serif;
-}
-
-.poetry-toc-number {
-  color: var(--muted);
-  margin-right: 0.5rem;
-}
-
-.poetry-toc-dots {
-  color: var(--border-subtle);
-}
-
-.poetry-toc-link {
-  color: var(--accent);
-  text-decoration: none;
-}
-
-.poetry-toc-link:hover {
-  opacity: 0.8;
-}
-
-.poem {
+  height: 0;
+  width: 3rem;
   margin: 3rem 0;
 }
 
-.poem-title {
-  color: var(--fg);
-  font-size: 1.25rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
-  font-family: Georgia, serif;
-}
-
-.poem-content {
-  background: rgba(42, 42, 42, 0.3);
-  border-left: 3px solid #6b9080;
-  margin: 1rem 0;
-  padding: 0;
+/* inline poem image */
+.pxml-image {
+  display: block;
+  margin: 1.8rem 0;
   border-radius: 4px;
 }
 
-.poem-text {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1rem;
-  line-height: 1.8;
-  color: var(--fg);
-  background: transparent;
-  padding: 1.5rem;
+/* collection index — table of contents */
+.pxml-toc {
+  list-style: none;
   margin: 0;
-  white-space: pre-wrap;
-  overflow-x: auto;
+  padding: 0;
+}
+.pxml-toc-item {
+  border-bottom: 1px solid var(--border-subtle);
+}
+.pxml-toc-item:last-child {
+  border-bottom: none;
+}
+.pxml-toc-link {
+  display: flex;
+  align-items: baseline;
+  gap: 0.8rem;
+  padding: 0.7rem 0.2rem;
+  color: var(--fg);
+}
+.pxml-toc-link:hover {
+  opacity: 1;
+  background: rgba(226, 103, 74, 0.06);
+}
+.pxml-toc-title {
+  flex: 1;
+}
+.pxml-toc-date {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+/* single-poem page chrome */
+.pxml-breadcrumb {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.78rem;
+  margin-bottom: 2.5rem;
+}
+.pxml-poemnav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--border-subtle);
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.78rem;
+}
+
+@media (max-width: 480px) {
+  .pxml {
+    font-size: 1.1rem;
+  }
 }
 
 body {

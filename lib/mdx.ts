@@ -21,7 +21,27 @@ export type ContentMeta = {
 export type ContentSection = "notebook" | "art" | "writing" | "systems";
 
 /**
- * Get all entries for a given section (metadata only)
+ * Recursively collect every `.mdx` file under a directory, returning paths
+ * relative to it (POSIX-separated). Subfolders let content be grouped
+ * (e.g. by year); the relative path becomes the slug. Hidden/underscore-
+ * prefixed entries are skipped (dotfiles, `_src`-style authoring dirs).
+ */
+function walkMdx(dir: string, baseDir: string): string[] {
+  const out: string[] = [];
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (entry.name.startsWith(".") || entry.name.startsWith("_")) continue;
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      out.push(...walkMdx(full, baseDir));
+    } else if (entry.name.endsWith(".mdx")) {
+      out.push(path.relative(baseDir, full).split(path.sep).join("/"));
+    }
+  }
+  return out;
+}
+
+/**
+ * Get all entries for a given section (metadata only), including nested folders.
  */
 export function getAllEntriesForSection(section: ContentSection): ContentMeta[] {
   const sectionDir = path.join(contentDir, section);
@@ -30,17 +50,14 @@ export function getAllEntriesForSection(section: ContentSection): ContentMeta[] 
     return [];
   }
 
-  const files = fs.readdirSync(sectionDir);
   const entries: ContentMeta[] = [];
 
-  for (const file of files) {
-    if (!file.endsWith(".mdx")) continue;
-
-    const filePath = path.join(sectionDir, file);
+  for (const rel of walkMdx(sectionDir, sectionDir)) {
+    const filePath = path.join(sectionDir, rel);
     const raw = fs.readFileSync(filePath, "utf8");
     const { data } = matter(raw);
 
-    const slug = file.replace(/\.mdx$/, "");
+    const slug = rel.replace(/\.mdx$/, "");
 
     entries.push({
       slug,

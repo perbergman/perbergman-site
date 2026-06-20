@@ -1,30 +1,37 @@
 import Link from "next/link";
-import { getAllPoetry } from "@/lib/pxml";
+import { getAllCollections } from "@/lib/pxml";
 
 export default function PoetryPage() {
-  const poems = getAllPoetry();
+  const collections = getAllCollections();
 
   return (
     <main>
       <section className="card">
         <h2>Poetry</h2>
         <p className="lede">
-          Verses in PXML format — a custom poetry markup language.
+          Verses in PXML v2 — a structured poetry format with stanzas, caesura,
+          and per-poem dates.
         </p>
       </section>
 
-      {poems.length === 0 ? (
+      {collections.length === 0 ? (
         <section className="card">
-          <p className="small">No poetry yet. Add PXML files to content/poetry/</p>
+          <p className="small">
+            No poetry yet. Add PXML files to content/poetry/
+          </p>
         </section>
       ) : (
         <section className="card">
           <ul className="list">
-            {poems.map((poem) => (
-              <li key={poem.slug} className="list-item">
-                <Link href={`/poetry/${poem.slug}`}>
-                  <div className="list-title">{poem.title}</div>
-                  <div className="list-meta small">{poem.uri}</div>
+            {collections.map((collection) => (
+              <li key={collection.slug} className="list-item">
+                <Link href={`/poetry/${collection.slug}`}>
+                  <div className="list-title">{collection.name}</div>
+                  <div className="list-meta small">
+                    {collection.date ? `${collection.date} · ` : ""}
+                    {collection.poemCount}{" "}
+                    {collection.poemCount === 1 ? "poem" : "poems"}
+                  </div>
                 </Link>
               </li>
             ))}
@@ -34,4 +41,3 @@ export default function PoetryPage() {
     </main>
   );
 }
-

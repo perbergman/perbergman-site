@@ -1,25 +1,24 @@
 import { notFound } from "next/navigation";
-import { getPoetryBySlug } from "@/lib/pxml";
-import { Poetry } from "@/components/Poetry";
+import { getCollectionBySlug } from "@/lib/pxml";
+import { CollectionIndex } from "@/components/Poetry";
 
-type PoetryPageProps = {
+type CollectionPageProps = {
   params: Promise<{
     slug: string;
   }>;
 };
 
-export default async function PoetryEntry({ params }: PoetryPageProps) {
-  const resolvedParams = await params;
-  const poetry = await getPoetryBySlug(resolvedParams.slug);
-  
-  if (!poetry) {
+export default async function CollectionPage({ params }: CollectionPageProps) {
+  const { slug } = await params;
+  const collection = getCollectionBySlug(slug);
+
+  if (!collection) {
     notFound();
   }
 
   return (
     <main className="card">
-      <Poetry poetry={poetry} />
+      <CollectionIndex collection={collection} slug={slug} />
     </main>
   );
 }
-

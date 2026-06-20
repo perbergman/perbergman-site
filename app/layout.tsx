@@ -2,6 +2,23 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Link from "next/link";
 import { ReactNode } from "react";
+import { EB_Garamond, IBM_Plex_Mono } from "next/font/google";
+
+// Verse face + metadata mono for PXML poetry (self-hosted at build by next/font).
+const verseFont = EB_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  style: ["normal", "italic"],
+  variable: "--font-verse",
+  display: "swap",
+});
+
+const monoFont = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-mono",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Per Bergman — Generative Architect",
@@ -27,7 +44,7 @@ const navLinks = [
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${verseFont.variable} ${monoFont.variable}`}>
       <body>
         <div className="layout-root">
           <header className="header">

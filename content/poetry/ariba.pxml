@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<poetry>
+  <about name="atAriba" date="2004-02-06" uri="/per/bergman/poetry/2004/zen">
+    some awakened poetry made at the not so awakened company Ariba
+  </about>
+  <keywords>Zen</keywords>
+  <poems>
+    <poem name="alive" id="p1" xml:space="preserve">
+      <stanza>
+        <line>feel to live today</line>
+        <line>time is disconnected and</line>
+        <line>each moment is brand new</line>
+      </stanza>
+      <stanza>
+        <line>my ego want's to create a timeline</line>
+        <line>but really it's discrete steps</line>
+      </stanza>
+      <stanza>
+        <line>reborn every second</line>
+        <line>relive, refurbish</line>
+      </stanza>
+      <stanza>
+        <line>then suddenly the ego wins again and</line>
+        <line>imposes an ordering in</line>
+        <line>the tacit non-logic</line>
+      </stanza>
+      <stanza>
+        <line>but for every day</line>
+        <line>the ego gets weaker, and it gets scared</line>
+      </stanza>
+      <stanza>
+        <line>it's my ego, but it's not me</line>
+        <line>so what is it</line>
+        <line>that feels alive today?</line>
+      </stanza>
+    </poem>
+    <poem name="freshness" id="p2" xml:space="preserve">
+      <stanza>
+        <line>freshness</line>
+        <line>smell of water after the rain</line>
+      </stanza>
+      <stanza>
+        <line>flowers glowing in the sunrise</line>
+        <line>eveything is new</line>
+      </stanza>
+      <stanza>
+        <line>the cars do not look the same</line>
+        <line>driving down the highway</line>
+      </stanza>
+      <stanza>
+        <line>awakened...</line>
+      </stanza>
+      <stanza>
+        <line>for a while</line>
+      </stanza>
+      <stanza>
+        <line>nothing really exists in this moment</line>
+        <line>but when boredom sets in all</line>
+        <line>the old crap comes back,</line>
+        <line>of no use to me</line>
+      </stanza>
+      <stanza>
+        <line>need to</line>
+        <line>get the air ftom the non-conceptual freshness</line>
+        <line>of water after the rain</line>
+      </stanza>
+    </poem>
+    <poem name="ravens" id="p3" xml:space="preserve">
+      <stanza>
+        <line>stickiness is the enemy</line>
+        <line>to stick to objects of any kind</line>
+      </stanza>
+      <stanza>
+        <line>even to stick to this moment</line>
+        <line>that soon will pass into another new world</line>
+      </stanza>
+      <stanza>
+        <line>diamonds found in the shelter</line>
+        <line>of old forgotten past</line>
+      </stanza>
+      <stanza>
+        <line>circling ravens very early</line>
+        <line>in the foggy morning</line>
+        <line>when everything is still quiet and still</line>
+      </stanza>
+      <stanza>
+        <line>with their typical sounds</line>
+        <line>mythical sounds</line>
+      </stanza>
+      <stanza>
+        <line>timelessness arises in the morning</line>
+        <line>before the machinery of continuity starts up</line>
+        <line>yet another day</line>
+      </stanza>
+      <stanza>
+        <line>making the object stick again</line>
+        <line>but maybe the glue can be made to weaken?</line>
+      </stanza>
+    </poem>
+    <poem name="inhalation" id="p4" xml:space="preserve">
+      <stanza>
+        <line>just inhale the senses</line>
+        <line>without attaching</line>
+      </stanza>
+      <stanza>
+        <line>cut the train</line>
+        <line>before it arrives to the station</line>
+        <line>on its old rusty tracks</line>
+      </stanza>
+      <stanza>
+        <line>the tracks are not really there</line>
+        <line>they are created by sustaining actions</line>
+      </stanza>
+      <stanza>
+        <line>they form a habit</line>
+        <line>trying to make sense in a non-logical world,</line>
+        <line>to make us feel safe,</line>
+        <line>when there is no safety</line>
+      </stanza>
+      <stanza>
+        <line>because safety itself it a track,</line>
+        <line>that's unreliable, really empty</line>
+      </stanza>
+      <stanza>
+        <line>it has a form but does not containing anything</line>
+      </stanza>
+      <stanza>
+        <line>so leave the station,just inhaling these illusions</line>
+        <line>without attachment</line>
+      </stanza>
+      <stanza>
+        <line>and let's the next moment decide</line>
+      </stanza>
+    </poem>
+    <poem name="freedom" id="p5" xml:space="preserve">
+      <stanza>
+        <line>let the body and mind fall</line>
+        <line>it feels good to release all crap</line>
+      </stanza>
+      <stanza>
+        <line>and not think in the normal way sometimes</line>
+        <line>it feel like another world, with another agenda</line>
+        <line>it does not matter who you are</line>
+        <line>or what people think about you</line>
+      </stanza>
+      <stanza>
+        <line>you might dream but it's ok not to realize everything,</line>
+        <line>and still feel good about that</line>
+      </stanza>
+      <stanza>
+        <line>nothing matters but it's not ignorance</line>
+        <line>eveything matters but it's not ignorance</line>
+      </stanza>
+      <stanza>
+        <line>next moment comes in a different light</line>
+        <line>a very sharp light,</line>
+        <line>slightly red and with a peculiar warm tone,</line>
+        <line>like that of roses, maybe a tad darker?</line>
+      </stanza>
+      <stanza>
+        <line>the freedom to write anything in every moment</line>
+        <line>the freedom to refuse to submit to other people's interest,</line>
+        <line>and still feel good about that</line>
+      </stanza>
+      <stanza>
+        <line>the freedom to create the next moment responsibly,</line>
+        <line>whitout putting yourself down,</line>
+        <line>keeping the integrity extremly high,</line>
+        <line>is very important</line>
+      </stanza>
+      <stanza>
+        <line>resfusal to give power</line>
+        <line role="turn">- to anyone</line>
+        <line>refusal to be dominated</line>
+        <line role="turn">- by anyone</line>
+      </stanza>
+      <stanza>
+        <line>refusal to lie</line>
+        <line role="turn">- to anyone</line>
+      </stanza>
+      <stanza>
+        <line>just letting the spontanity come forward</line>
+        <line>without worries about it</line>
+      </stanza>
+      <stanza>
+        <line>there is no body or mind anymore</line>
+      </stanza>
+    </poem>
+    <poem name="nothing" id="p6" xml:space="preserve">
+      <stanza>
+        <line>all these things we have to think about</line>
+        <line>maybe the focus is a bit distorted here?</line>
+      </stanza>
+      <stanza>
+        <line>maybe to much energy is spent on the wrong things</line>
+        <line>in my case</line>
+      </stanza>
+      <stanza>
+        <line>it's very draining to waste energy on this</line>
+        <line>and no drug or treatment will work on the core level</line>
+        <line>of emptiness</line>
+      </stanza>
+      <stanza>
+        <line>because how can anything at all modify nothingness?</line>
+      </stanza>
+      <stanza>
+        <line>it's hard to cure something missing, a void,</line>
+        <line>with something existing</line>
+      </stanza>
+      <stanza>
+        <line>isn't it?</line>
+      </stanza>
+      <stanza>
+        <line>the focus should transcend the factuality of</line>
+        <line>specific problems</line>
+      </stanza>
+      <stanza>
+        <line>they will come and go everyday</line>
+        <line>created by transient states of mind</line>
+        <line>that has no intrinsic existence</line>
+      </stanza>
+      <stanza>
+        <line>but still we want to create ourselves based</line>
+        <line>on nothingness</line>
+      </stanza>
+      <break type="section"/>
+      <stanza>
+        <line>right now my mind is completely empty,</line>
+        <line>and my fingers writes this down,</line>
+        <line>without any effort or search for gain</line>
+      </stanza>
+      <stanza>
+        <line>the mind is not driven to create,</line>
+        <line>it just creates by itself</line>
+      </stanza>
+      <stanza>
+        <line>this is the optimal state</line>
+        <line>and there is no need to do or think anything</line>
+        <line>specific</line>
+      </stanza>
+    </poem>
+    <poem name="dreams" id="p7" xml:space="preserve">
+      <stanza>
+        <line>I feel I can leave now</line>
+        <line>leave all the requirements and pressure</line>
+      </stanza>
+      <stanza>
+        <line>on the shelf</line>
+        <line>and wrap it in plastic</line>
+        <line>for future reference</line>
+      </stanza>
+      <stanza>
+        <line>to laugh at myself,</line>
+        <line>not finding this serenity before,</line>
+      </stanza>
+      <stanza>
+        <line>instead getting bogged down in "physical" existence,</line>
+        <line>just being aware of my own breath</line>
+      </stanza>
+      <stanza>
+        <line>the upbringing creates all these expectations,</line>
+        <line>but you have to let it go</line>
+        <line>and just listen to the music, only you like</line>
+      </stanza>
+      <stanza>
+        <line>but I still have problems</line>
+        <line>letting all dreams go</line>
+        <line>because I'm curious</line>
+      </stanza>
+      <stanza>
+        <line>going to Sahara</line>
+        <line>going to Italy</line>
+        <line>going to Asia</line>
+      </stanza>
+      <stanza>
+        <line>and I don't think it's wrong</line>
+      </stanza>
+      <stanza>
+        <line>it's just seeds that will affect</line>
+        <line>the future in some way</line>
+      </stanza>
+    </poem>
+    <poem name="bored" id="p8" xml:space="preserve">
+      <stanza>
+        <line>it's after lunch and the body machine</line>
+        <line>is a bit tired melting the food atoms</line>
+      </stanza>
+      <stanza>
+        <line>the mind feels a bit bored now,</line>
+        <line>just wait and see.</line>
+      </stanza>
+    </poem>
+  </poems>
+</poetry>

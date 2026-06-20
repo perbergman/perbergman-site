@@ -1,24 +1,15 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE poetry SYSTEM "pxml.dtd">
-
+<?xml version="1.0" encoding="UTF-8"?>
 <poetry>
-
-  <about uri="tag:perbergman.com,2012-05-12:lenin">
+  <about name="lenin" date="2012-05-12" uri="tag:perbergman.com,2012-05-12:lenin">
   </about>
-
-  <keywords>
-  </keywords>
-
   <poems>
-
-     <poem name="mouth" localref="1">
-all thinking created in the mouth
-where inner and outer meets
-where the vomit comes out
-and the air in
+    <poem name="mouth" id="mouth" xml:space="preserve">
+      <stanza>
+        <line>all thinking created in the mouth</line>
+        <line>where inner and outer meets</line>
+        <line>where the vomit comes out</line>
+        <line>and the air in</line>
+      </stanza>
     </poem>
-
- </poems>
-
+  </poems>
 </poetry>
-

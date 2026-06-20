@@ -1,0 +1,4 @@
+Vendored verbatim from the PXML toolchain (~/Documents/dev/pxml).
+These are authoring-side front-ends, run only by 'npm run poetry:build'.
+They are never executed at deploy time — Vercel reads the committed .pxml.
+See ../pxml/README.md for the full pipeline.
